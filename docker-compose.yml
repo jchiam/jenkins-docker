@@ -1,0 +1,20 @@
+version: '2'
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: jenkins
+    ports:
+      - "49001:8080"
+    depends_on:
+      - data
+    volumes_from:
+      - data
+    restart: always
+  data:
+    build:
+      context: ./
+      dockerfile: Dockerfile-data
+    container_name: jenkins-data
+    restart: always
