@@ -10,7 +10,7 @@ RUN chown -R jenkins:jenkins /var/cache/jenkins
 RUN apt-get update && apt-get install -y make
 
 # NPM
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash \
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash \
     && apt-get install -y nodejs
 
 # Yarn
