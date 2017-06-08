@@ -20,5 +20,3 @@ RUN npm install -g yarn
 # RUN yarn global add firebase-tools    # Firebase
 
 USER jenkins
-
-ENV JAVA_OPTS="-Xmx8192m"

@@ -4,6 +4,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    environment:
+      - JAVA_OPTS=-Xmx2048m
     container_name: jenkins
     ports:
       - "49001:8080"
