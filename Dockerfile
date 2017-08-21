@@ -1,4 +1,4 @@
-FROM jenkins:latest
+FROM jenkins/jenkins:latest
 
 USER root
 
@@ -17,6 +17,6 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash \
 RUN npm install -g yarn
 
 # Other dependencies
-# RUN yarn global add firebase-tools    # Firebase
+# RUN npm install -g firebase-tools    # Firebase
 
 USER jenkins
