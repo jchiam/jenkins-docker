@@ -6,9 +6,15 @@ services:
       dockerfile: Dockerfile
     environment:
       - JAVA_OPTS=-Xmx2048m
+      - VIRTUAL_HOST=jenkins.jonchiam.com
+      - VIRTUAL_PORT=8080
+      - LETSENCRYPT_HOST=jenkins.jonchiam.com
+      - LETSENCRYPT_EMAIL=jczjchiam@gmail.com
     container_name: jenkins
     ports:
       - "49001:8080"
+    expose:
+      - "8080"
     depends_on:
       - data
     volumes_from:
@@ -23,3 +29,8 @@ services:
       - /jenkins/home:/var/jenkins_home
     container_name: jenkins-data
     restart: always
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

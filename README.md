@@ -1,5 +1,7 @@
 # Jenkins Docker
 
+This jenkins setup is based on [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy) and partially follows the tutorial at [this article](https://medium.com/@francoisromain/host-multiple-websites-with-https-inside-docker-containers-on-a-single-server-18467484ab95).
+
 ## Setup
 
 1. Set environment variables in `docker-compose.yml`
