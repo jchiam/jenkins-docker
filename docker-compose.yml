@@ -17,6 +17,8 @@ services:
       - "8080"
     depends_on:
       - data
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     volumes_from:
       - data
     restart: always
