@@ -32,7 +32,7 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash \
 # Yarn
 RUN npm install -g yarn
 
-# Other dependencies
-# RUN npm install -g firebase-tools    # Firebase
+# Other dependencies - Firebase
+RUN npm install -g firebase-tools
 
 USER jenkins
