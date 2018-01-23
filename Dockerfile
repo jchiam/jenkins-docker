@@ -26,7 +26,8 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-co
 
 # NPM
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash \
-    && apt-get install -y nodejs
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/*
 
 # Yarn
 RUN npm install -g yarn
